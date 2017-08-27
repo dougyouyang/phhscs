@@ -13,11 +13,11 @@ int main()
     total=cur=array;
     for(i=2;i<=n;i++){
         cin >> array;
-        if(array>total && cur<0)
+        if(array>total && cur<0){
             total=cur=array;
-        else
-            cur+=array;
-        total=max(total, cur);
+            continue;
+        }
+        cur+=array, total=max(total, cur);
     }
     
     cout << total << endl;
